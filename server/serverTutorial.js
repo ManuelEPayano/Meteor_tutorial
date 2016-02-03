@@ -1,10 +1,4 @@
-console.log("Hello world"); //Check that the WebApp is up.
-PlayersList = new Mongo.Collection('players'); // Starts the global variable PlayerList and the player collection
-if(Meteor.isClient){
-    
-}
-if(Meteor.isServer){
-    console.log("Hello Server");
+console.log("Hello Server");
     Meteor.publish('thePlayers', function(){
         var currentUserId = this.userId;
         return PlayersList.find({createdBy: currentUserId})
@@ -26,4 +20,3 @@ if(Meteor.isServer){
                 {$inc: {score: scoreValue} });
         }        
     });
-}
