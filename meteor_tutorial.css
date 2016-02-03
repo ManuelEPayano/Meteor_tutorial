@@ -1,4 +1,4 @@
 /* CSS declarations go here */
 .selected{ /*changes the selected player to yellow*/
-    background-color: yellow; 
+    background-color: red; 
 }
